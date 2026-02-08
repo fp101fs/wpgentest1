@@ -1,0 +1,181 @@
+/*
+ * Plugin: Simple Weather Dashboard
+ * Description: Styles for the modern UI of the Weather Dashboard.
+ */
+
+/* Main Dashboard Grid */
+.swd-dashboard-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    margin-top: 20px;
+}
+
+/* Individual Dashboard Cards (Widgets) */
+.swd-dashboard-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07); /* Subtle shadow */
+    padding: 25px;
+    flex: 1; /* Allow cards to grow and shrink */
+    min-width: 300px; /* Minimum width for responsiveness */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out; /* Smooth transition for hover effects */
+    max-width: calc(50% - 10px); /* Adjust max-width for 2 columns, considering gap */
+}
+
+@media (max-width: 900px) {
+    .swd-dashboard-card {
+        max-width: 100%; /* Stack cards on smaller screens */
+    }
+}
+
+.swd-dashboard-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.swd-dashboard-card h2 {
+    font-size: 22px; /* Slightly larger heading */
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333333;
+    border-bottom: 1px solid #eeeeee; /* Separator under title */
+    padding-bottom: 15px;
+    line-height: 1.2;
+}
+
+/* Weather Panel Specific Styles */
+#weather-container {
+    max-width: 400px; /* Make weather panel slightly narrower */
+}
+.swd-weather-widget {
+    text-align: center;
+    color: #333;
+}
+
+.swd-weather-widget .swd-weather-icon {
+    font-size: 68px; /* Larger icon */
+    line-height: 1;
+    margin-bottom: 15px;
+    color: #4CAF50; /* A pleasant green for weather */
+    display: block; /* Ensure icon is on its own line */
+}
+
+.swd-weather-widget .dashicons {
+    width: auto; /* Override default dashicons width */
+    height: auto; /* Override default dashicons height */
+    font-size: inherit; /* Ensure dashicons font size is respected */
+}
+
+
+.swd-weather-widget .swd-weather-temp {
+    font-size: 52px; /* Very large temperature display */
+    font-weight: 700; /* Bold */
+    margin-bottom: 10px;
+    color: #222222;
+}
+
+.swd-weather-widget .swd-weather-condition,
+.swd-weather-widget .swd-weather-wind {
+    font-size: 19px;
+    margin-bottom: 8px;
+    color: #555555;
+}
+
+.swd-weather-widget .swd-last-updated {
+    font-size: 13px;
+    color: #999999;
+    margin-top: 25px;
+    border-top: 1px solid #eeeeee;
+    padding-top: 15px;
+    display: block;
+}
+
+/* News Panel Specific Styles */
+.swd-news-list {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+.swd-news-item {
+    border-bottom: 1px solid #f0f0f0; /* Lighter separator for news items */
+    padding: 15px 0;
+}
+
+.swd-news-item:first-child {
+    padding-top: 0; /* No top padding for the first item */
+}
+
+.swd-news-item:last-child {
+    border-bottom: none; /* No border for the last item */
+    padding-bottom: 0;
+}
+
+.swd-news-item .swd-news-title {
+    margin: 0 0 8px 0;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.swd-news-item .swd-news-title a {
+    text-decoration: none;
+    color: #0073aa; /* WordPress primary blue */
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.swd-news-item .swd-news-title a:hover {
+    color: #005177; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+.swd-news-item .swd-news-description {
+    margin: 5px 0;
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.swd-news-item .swd-news-date {
+    display: block;
+    font-size: 12px;
+    color: #999999;
+    margin-top: 8px;
+}
+
+.swd-news-list-footer {
+    font-size: 13px;
+    color: #999999;
+    margin-top: 25px;
+    border-top: 1px solid #eeeeee;
+    padding-top: 15px;
+    display: block;
+}
+
+/* Hello Everyone Panel Specific Styles */
+.swd-hello-panel p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555555;
+    margin-bottom: 15px;
+}
+.swd-hello-panel p:last-child {
+    margin-bottom: 0;
+}
+
+/* Error Message Styles */
+p.swd-error-message {
+    color: #D63638; /* WordPress error red */
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    background-color: #ffebe8;
+    border: 1px solid #D63638;
+    border-radius: 4px;
+    margin: 15px 0;
+}
